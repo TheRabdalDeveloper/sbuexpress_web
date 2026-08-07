@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /build/
+Disallow: /assets/patterns/
+
+Sitemap: https://www.sbuexpress.com/sitemap.xml

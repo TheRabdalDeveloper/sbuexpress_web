@@ -124,6 +124,26 @@
 
     gtag('config', 'AW-17682710530');
   </script>
+
+  <!-- Pelacak Konversi WhatsApp untuk Google Ads & GTM -->
+  <script>
+    window.trackWhatsAppClick = function() {
+      // 1. Kirim event ke Google Tag Manager DataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'klik_whatsapp',
+        'conversion_type': 'whatsapp_lead'
+      });
+
+      // 2. Kirim event ke Google Ads (gtag)
+      if (typeof gtag === 'function') {
+        gtag('event', 'klik_whatsapp', {
+          'event_category': 'Kontak',
+          'event_label': 'Tombol Konsultasi WhatsApp'
+        });
+      }
+    };
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->

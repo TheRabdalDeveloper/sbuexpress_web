@@ -24,6 +24,15 @@
   <base href="/">
 
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' data: blob:;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' wasm-unsafe-eval data: blob: https://www.googletagmanager.com https://*.googletagmanager.com https://tagmanager.google.com https://tagassistant.google.com https://www.google-analytics.com https://ssl.google-analytics.com https://*.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://*.google.com https://www.gstatic.com https://*.gstatic.com;
+    style-src 'self' 'unsafe-inline' https://googletagmanager.com https://tagmanager.google.com https://fonts.googleapis.com;
+    font-src 'self' data: https://fonts.gstatic.com;
+    img-src 'self' data: blob: https://www.googletagmanager.com https://*.googletagmanager.com https://tagmanager.google.com https://ssl.gstatic.com https://www.gstatic.com https://*.gstatic.com https://*.google-analytics.com https://*.analytics.google.com https://www.google-analytics.com https://*.g.doubleclick.net https://*.google.com https://*.google.co.id https://googleads.g.doubleclick.net https://ad.doubleclick.net https://ade.googlesyndication.com https://*.fls.doubleclick.net;
+    connect-src 'self' data: blob: http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:* https://www.googletagmanager.com https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.google-analytics.com https://*.g.doubleclick.net https://*.google.com https://*.google.co.id https://fonts.googleapis.com https://fonts.gstatic.com https://www.gstatic.com https://*.gstatic.com;
+    frame-src 'self' https://www.googletagmanager.com https://tagassistant.google.com https://bid.g.doubleclick.net https://*.fls.doubleclick.net;
+  ">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="SBU Express - Jasa pengurusan SBU (Sertifikat Badan Usaha) Konstruksi termurah dan tercepat di Indonesia. Proses 3 hari terbit, legalitas terjamin, dan konsultasi gratis.">
   <meta name="keywords" content="jasa sbu murah, buat sbu cepat, sertifikat badan usaha konstruksi, sbu 3 hari terbit, sbu lpjk, skk konstruksi, iso murah indonesia, legalitas konstruksi terbaik">

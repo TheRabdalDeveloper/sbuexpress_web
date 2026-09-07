@@ -25,6 +25,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://tagassistant.google.com https://www.google-analytics.com https://*.google-analytics.com; script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com https://tagassistant.google.com https://www.google-analytics.com https://*.google-analytics.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.googletagmanager.com https://*.googletagmanager.com https://tagassistant.google.com https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-src 'self' https://www.googletagmanager.com https://tagassistant.google.com https://maps.google.com https://www.google.com;">
   <meta name="description" content="SBU Express - Jasa pengurusan SBU (Sertifikat Badan Usaha) Konstruksi termurah dan tercepat di Indonesia. Proses 3 hari terbit, legalitas terjamin, dan konsultasi gratis.">
   <meta name="keywords" content="jasa sbu murah, buat sbu cepat, sertifikat badan usaha konstruksi, sbu 3 hari terbit, sbu lpjk, skk konstruksi, iso murah indonesia, legalitas konstruksi terbaik">
   <meta name="author" content="SBU Express Indonesia">
@@ -115,35 +116,6 @@
   </script>
   <link rel="manifest" href="manifest.json">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17682710530"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17682710530');
-  </script>
-
-  <!-- Pelacak Konversi WhatsApp untuk Google Ads & GTM -->
-  <script>
-    window.trackWhatsAppClick = function() {
-      // 1. Kirim event ke Google Tag Manager DataLayer
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        'event': 'klik_whatsapp',
-        'conversion_type': 'whatsapp_lead'
-      });
-
-      // 2. Kirim event ke Google Ads (gtag)
-      if (typeof gtag === 'function') {
-        gtag('event', 'klik_whatsapp', {
-          'event_category': 'Kontak',
-          'event_label': 'Tombol Konsultasi WhatsApp'
-        });
-      }
-    };
-  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->

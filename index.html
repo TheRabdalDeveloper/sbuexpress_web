@@ -9,23 +9,23 @@
   })(window,document,'script','dataLayer','GTM-M8LPN8RJ');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Google tag (gtag.js) - Conversion Tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-M8LPN8RJ"></script>
+  <!-- Helper functions untuk Flutter → GTM/dataLayer -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GTM-M8LPN8RJ', {
-      'send_page_view': true
-    });
-   
+
     // Helper dipanggil dari Flutter/Dart untuk melacak page view
+    // GTM: buat Trigger "Custom Event" dengan nama "flutter_page_view"
+    // atau gunakan Variable dataLayer untuk page_path & page_title.
     window.gtagPageView = function(path, title) {
-      gtag('event', 'page_view', {
-        'page_path': path || window.location.pathname,
-        'page_title': title || document.title,
-        'page_location': window.location.href
-      });
+      window.dataLayer = window.dataLayer || [];
+      var payload = {
+        event: 'flutter_page_view',
+        page_path: path || window.location.pathname,
+        page_title: title || document.title,
+        page_location: window.location.href
+      };
+      window.dataLayer.push(payload);
+      console.log('[Analytics] dataLayer push:', payload);
     };
 
     // ─────────────────────────────────────────────────────────────
@@ -39,9 +39,10 @@
       window.dataLayer = window.dataLayer || [];
       var payload = Object.assign({ event: eventName }, params || {});
       window.dataLayer.push(payload);
+      console.log('[Analytics] dataLayer push:', payload);
     };
   </script>
-  <!-- End Google tag -->
+  <!-- End Helper functions -->
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.

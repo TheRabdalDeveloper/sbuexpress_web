@@ -8,6 +8,33 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-M8LPN8RJ');</script>
   <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) - Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-M8LPN8RJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-M8LPN8RJ', {
+      'send_page_view': true
+    });
+   
+    // Helper dipanggil dari Flutter/Dart untuk melacak page view
+    window.gtagPageView = function(path, title) {
+      gtag('event', 'page_view', {
+        'page_path': path || window.location.pathname,
+        'page_title': title || document.title,
+        'page_location': window.location.href
+      });
+    };
+
+    // Helper untuk melacak konversi kustom (BUKAN WhatsApp)
+    // eventName: nama event, params: object parameter tambahan
+    window.gtagEvent = function(eventName, params) {
+      gtag('event', eventName, params || {});
+    };
+  </script>
+  <!-- End Google tag -->
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
